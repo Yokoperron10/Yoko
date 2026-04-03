@@ -1,0 +1,134 @@
+.yoko{
+    width: 250px;
+}
+.yoko2{
+    width: 250px;
+}
+.ghost{
+    width: 400px;
+}
+
+.yoko4{
+    width: 300px;
+}
+.corazones{
+    width: 100%;
+    position: fixed;
+}
+
+*{
+    margin: 0;
+    padding: 0; /*es el espacio interno de un elemento: https://lh4.googleusercontent.com/-1Piq3Ia65ws/UjHz7CeKS1I/AAAAAAAAAS0/rdDu26tLuho/s406/CU01028D_1.png*/
+    box-sizing: border-box; /*define que tamaño debe tener la box con border-box, y no crece al agregar elementos: https://miro.medium.com/v2/1*08DnApeCVZ9QwaxgOrzGkA.jpeg*/
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+    min-height: 100vh; /*altura minima que puede crecer*/
+    display: flex; /* activa el flexbox para los hijos*/
+    justify-content: center; /*mueve los elementos en el eje horizontal*/
+    align-items: center; /*mueve los elementos en el eje vertical*/
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+}
+
+.container .btn{
+    display: flex;
+    gap: 25px;
+}
+
+.container2{
+    max-width: 500px; /* Limita el ancho max del contenedor*/
+    margin: 20px; /*espacio por fuera del contenedor*/
+    display:flex; /* activa el flexbox para los hijos*/
+    flex-direction: column; /* cambia direccion a vertical (uno debajo de otro)*/
+    text-align: center; /*centra el texto*/
+    align-items: center; /*centra los elementos vertical*/
+    gap: 20px; /*espacio entre los hijos (como margen automatico entre ellos*/
+}
+
+.container2 .btn{
+    display: flex;
+    gap: 25px;
+}
+
+.container3{
+    max-width: 500px;
+    margin: 20px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container3 .btn{
+    display: flex;
+    gap: 25px;
+}
+
+.container4{
+    max-width: 500px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.container4 .btn{
+    display: flex;
+    gap: 25px;
+
+}
+
+.container5 {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn a { /* al usar "a" toma los botones de forma independiente afectando solo los links dentro*/
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 15px 20px; /*con 2 valores se define el espacio interno de: arriba/abajo, y izquierda/derecha*/
+    border-radius: 8px; /*hace las esquinas de la caja*/
+    box-shadow: 0px 4px 10px; /*agrega sombra a los elementos, 0px->movimiento horizontal, 4px->movimiento vertical, 10px->desenfoque(blur)*/
+}
+
+.box {
+    opacity: 0;
+    transform: scale(0);
+    animation: agrandar 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes agrandar{
+    to{
+        opacity: 1;
+        transform: scale(2);
+        
+    }
+}
+
+
